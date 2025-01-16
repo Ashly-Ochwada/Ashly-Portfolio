@@ -26,34 +26,35 @@ const Wrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
 `
+
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   console.log(openModal)
-  return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
-        <Navbar />
-        <Body>
-          <HeroSection />
-          <Wrapper>
-            <Skills />
-            <Education />
-          </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
-          <Wrapper>
-            <Experience />
-           
-            <Contact />
-          </Wrapper>
-          <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
-        </Body>
-      </Router>
-    </ThemeProvider>
-  );
+
+return (
+  <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <Router>
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Body>
+        <HeroSection />
+        <Wrapper>
+          <Skills />
+          <Experience />
+        </Wrapper>
+        <Projects openModal={openModal} setOpenModal={setOpenModal} />
+        <Wrapper>
+          <Education />
+          <Contact />
+        </Wrapper>
+        <Footer />
+        {openModal.state && (
+          <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+        )}
+      </Body>
+    </Router>
+  </ThemeProvider>
+);
 }
 
 export default App;

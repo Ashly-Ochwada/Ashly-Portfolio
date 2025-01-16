@@ -1,5 +1,5 @@
 export const Bio = {
-  name: "Ashly w Ochwada",
+  name: "Ashly W Ochwada",
   roles: [
     "Full Stack Developer",
     "Frontend Developer",
@@ -14,7 +14,6 @@ export const Bio = {
     "https://drive.google.com/file/d/14-XTc_u4Bbvgd6D80c3O5_zyvy9C4PvA/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/ashly-ochwada/",
   twitter: "https://x.com/AshlyOchwada",
-  // medium: "https://medium.com/@ashlywochwada",
 
 };
 
@@ -146,6 +145,52 @@ export const skills = [
       },
     ],
   },
+  {  title: "Machine Learning",
+  skills: [
+    
+    {
+      name: "Pandas",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg",
+    },
+    {
+      name: "Jupyter",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg",
+    },
+    {
+      name: "Python",
+      image:
+        "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+    },
+    {
+      name: "SQL",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/d/d7/Sql_data_base_with_logo.svg",
+    },
+    {
+      name: "Scikit-learn",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/800px-Scikit_learn_logo_small.svg.png",
+    },
+    {
+      name: "Tensor Flow",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/TensorFlow_logo.svg/1200px-TensorFlow_logo.svg.png",
+    },
+    {
+      name: "Matplotlib",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/c/ca/Mpl_screenshot_figures_and_code.png",
+    },
+    {
+      name: "Numpy",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg",
+    },
+   
+  ],
+},
   {
     title: "Others",
     skills: [
@@ -193,6 +238,16 @@ export const skills = [
         name: "Figma",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+      },
+      {
+        name: "GIS",
+        image:
+          "https://waynetownship.com/wp-content/uploads/2013/03/GIS.png",
+      },
+      {
+        name: "Remote Sensing",
+        image:
+          "https://www.basarsoft.com.tr/wp-content/uploads/2021/12/remote-sensing-logo-244x130.png",
       },
     ],
   },

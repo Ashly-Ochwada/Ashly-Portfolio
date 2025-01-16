@@ -1,61 +1,141 @@
-import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
-import { DiCssdeck } from 'react-icons/di';
-import { FaBars } from 'react-icons/fa';
-import { Bio } from '../../data/constants';
-import { Close, CloseRounded } from '@mui/icons-material';
-import { useTheme } from 'styled-components';
+import React, { useEffect, useState } from "react";
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, ButtonContainer, MobileIcon, MobileMenu, MobileLink } from "./NavbarStyledComponent";
+import { DiCssdeck } from "react-icons/di";
+import { FaBars } from "react-icons/fa";
+import { WbSunny, NightsStay } from "@mui/icons-material";
+import { useTheme } from "styled-components";
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
+  const [activeSection, setActiveSection] = useState("");
+  const theme = useTheme();
+
+  const handleScroll = () => {
+    const sections = ["about", "skills", "experience", "projects", "education"];
+    const scrollPosition = window.scrollY;
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section);
+      if (element) {
+        const offsetTop = element.offsetTop;
+        const height = element.offsetHeight;
+
+        if (scrollPosition >= offsetTop - height / 3 && scrollPosition < offsetTop + height) {
+          setActiveSection(section);
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to='/'>
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-            <DiCssdeck size="3rem" /> <Span>AWO Portfolio</Span>
+        <NavLogo to="/">
+          <a
+            style={{
+              display: "flex",
+              alignItems: "center",
+              color: "white",
+              marginBottom: "20",
+              cursor: "pointer",
+            }}
+          >
+            <DiCssdeck size="3rem" />{" "}
+            <Span
+              style={{
+                color: theme.primary,
+                padding: "10px 16px",
+                border: "none",
+                borderRadius: "8px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              AWO
+            </Span>
           </a>
         </NavLogo>
         <MobileIcon>
-          <FaBars onClick={() => {
-            setIsOpen(!isOpen)
-          }} />
+          <FaBars onClick={() => setIsOpen(!isOpen)} />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href='#skills'>Skills</NavLink>
-          <NavLink href='#experience'>Experience</NavLink>
-          <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#education'>Education</NavLink>
+          {["about", "skills", "experience", "projects", "education"].map((section) => (
+            <NavLink
+              key={section}
+              href={`#${section}`}
+              style={{
+                color: activeSection === section 
+                  ? theme.primary 
+                  : darkMode ? "white" : "black", 
+                fontWeight: activeSection === section ? "bold" : "normal",
+              }}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+          </NavLink>
+          
+          ))}
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <button
+              onClick={toggleTheme}
+              style={{
+                backgroundColor: darkMode ? "white" : "black",
+                color: darkMode ? "black" : "white",
+                padding: "4px 8px",
+                fontSize: "10px",
+                border: "none",
+                borderRadius: "19px",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              {darkMode ? (
+                <>
+                  <WbSunny style={{ marginRight: "8px" }} />
+                  Light
+                </>
+              ) : (
+                <>
+                  <NightsStay style={{ marginRight: "8px" }} />
+                  Dark
+                </>
+              )}
+            </button>
+          </div>
         </ButtonContainer>
-        {
-          isOpen &&
+        {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <MobileLink href="#about" onClick={() => {
-              setIsOpen(!isOpen)
-            }}>About</MobileLink>
-            <MobileLink href='#skills' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Skills</MobileLink>
-            <MobileLink href='#experience' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Experience</MobileLink>
-            <MobileLink href='#projects' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Projects</MobileLink>
-            <MobileLink href='#education' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+            {["about", "skills", "experience", "projects", "education"].map((section) => (
+              <MobileLink
+                key={section}
+                href={`#${section}`}
+                onClick={() => setIsOpen(!isOpen)}
+                style={{
+                  color: activeSection === section ? theme.primary : "white", 
+                  fontWeight: activeSection === section ? "bold" : "normal", 
+                }}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </MobileLink>
+            ))}
           </MobileMenu>
-        }
+        )}
       </NavbarContainer>
     </Nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
+

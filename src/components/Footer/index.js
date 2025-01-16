@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
 // import MediumIcon from '@mui/icons-material/Medium';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { Bio } from '../../data/constants';
 
 const FooterContainer = styled.div`
@@ -98,7 +99,7 @@ function Footer() {
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.twitter} target="display"><XIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          {/* <SocialMediaIcon href={Bio.medium} target="display"><MediumIcon /></SocialMediaIcon> */}
+          <SocialMediaIcon href={Bio.github} target="display"><GitHubIcon/></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
           &copy; 2025 Ashly Ochwada. All rights reserved.

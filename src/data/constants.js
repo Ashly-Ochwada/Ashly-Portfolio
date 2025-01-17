@@ -217,7 +217,7 @@ export const skills = [
       {
         name: "Netlify",
         image:
-          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Netlify_logo_%282%29.svg/1200px-Netlify_logo_%282%29.svg.png",
       },
       {
         name: "VS Code",
@@ -473,7 +473,7 @@ export const projects = [
     description:
       "Virtual reality desktop website UI design",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw_-LwaPEy74xZD5O0S_sb3sdSUS0s0HUysw&s",
+      "https://media.assettype.com/analyticsinsight%2Fimport%2Fwp-content%2Fuploads%2F2021%2F11%2FVirtual-reality.jpg",
     tags: [
       "Figma", "Design", "Prototype" ],
     category: "ui design app",
@@ -513,9 +513,9 @@ export const projects = [
     title: "Cosmetics web app low-fi prototype",
     date: "July 2023",
     description:
-      "A low-fidelity prototype of a webiste that shows cosmetics to be sold.",
+      "A low-fidelity wireframe for an online cosmetics shop, emphasizing simplicity and usability. The prototype features a clean layout with placeholder elements for product thumbnails, search functionality, categories (e.g., skincare, makeup, haircare), and a minimal checkout process. The focus is on understanding the structure and user journey before adding detailed design elements.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6avCTrXuxMuW25ZY-prIwb7MgbMSyX2GcJig7k5lsK8NCxJbgrg99oV1TT0WC1JaFpm0&usqp=CAU",
+      "https://i.pinimg.com/736x/55/65/a1/5565a157114b1865352633b3ceb7881e.jpg",
     tags: ["Figma", "Wireframes", "Design", "Low-Fi", "Prototype"],
     category: "ui design app",
     github: "https://www.figma.com/design/11vfdAR9k3vipfQVbG5Lfy/Cosmetics-Design?m=auto&t=8eVTuE4SYAV8QVqy-6",
@@ -527,9 +527,9 @@ export const projects = [
     title: "The Cane Foods",
     date: "November 2022",
     description:
-      "A simple food app that shows different cuisines",
+      "An easy-to-use food app that introduces users to a wide range of cuisines. It offers visually appealing content, brief descriptions, and a seamless browsing experience for food enthusiasts.",
     image:
-      "https://the-cane-foods-website.netlify.app/images/home-img.png",
+      "https://www.hashtagburgersandwaffles.com.au/wp-content/uploads/2024/08/Why-Fast-Foods-Are-So-Successful.jpeg",
     tags: ["HTML" , "CSS" , "SCSS", "JavaScript"],
     category: "web app",
     github: "https://github.com/Ashly-Ochwada/The-Cane-Foods",
@@ -540,9 +540,9 @@ export const projects = [
     title: "School Management System",
     date: "January 2022",
     description:
-      "A simple python school management system",
+      "A user-friendly platform designed to streamline administrative tasks, enhance communication, and improve efficiency in educational institutions. Features include student enrollment, attendance tracking, timetable management, fee collection, and progress reporting, providing a centralized system for educators, administrators, students, and parents",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKKyhiVxrHKQcfGI2bqzFImh-Ofj5qydaa8A&s",
+      "https://i0.wp.com/inceptor.co.ke/wp-content/uploads/2019/09/school-management-system-in-Kenya-Inceptor.png?ssl=1",
     tags: ["Python", "HTML", "Django", "Rest API", "PostreSQL"],
     category: "backend app",
     github: "https://github.com/Ashly-Ochwada/School-Management-System.git",
@@ -553,9 +553,9 @@ export const projects = [
     title: "School System Node App",
     date: "October 2022 - December 2022",
     description:
-      "A simple Node JS school management system",
+      "An innovative system that digitizes and automates school operations, enabling seamless coordination between various stakeholders. The project integrates modules for managing academic records, scheduling, staff details, and parent-teacher communication while ensuring data security and ease of use for users at all levels.",
     image:
-      "https://leadschool.in/wp-content/uploads/2024/01/Which-is-the-best-all-in-one-school-management-system-in-India.png",
+      "https://media.licdn.com/dms/image/v2/D4D12AQGMSihfr5huBA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1701765450293?e=2147483647&v=beta&t=SGWlnjI9fDaMfXm92ch98YSImnUsKnBOqAbC7p6fB3o",
     tags: ["NodeJS", "Rest API", "PostreSQL"],
     category: "backend app",
     github: "https://github.com/Ashly-Ochwada/School-System-Node-App.git",
@@ -582,7 +582,7 @@ export const projects = [
     description:
       "Web app design of Ardhi Analytics.",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf8QAFTQIZqwo9lca0AfZbr-ewC_uGY__stg&s",
+      "https://i.wpimg.pl/1920x1080/filerepo.grupawp.pl/api/v1/display/embed/eb2694f5-9bf5-487c-a918-79ce6d7246a7",
     tags: ["Figma", "Wireframes", "Design",],
     category: "ui design app",
     github: "https://www.figma.com/design/AzUCmkxbJhJbfhgZmWawJB/Ardhi-App?m=auto&t=Ka3j1iY1tDIHs4FE-6",
@@ -608,7 +608,7 @@ export const projects = [
     description:
       "A weather website to check the temperature, humidity and wind speed",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSquGOGxMBTJrlyg5C1X93oQc5oNRl40EDaidbr6YWp1xS1b1hgNlDM9oE2kR7BFbV9eeI&usqp=CAU",
+      "https://www.cleveland.com/resizer/v2/S56ND4K7VVEODK44QFFOSHH5E4.jpg?auth=9061c5d56a9ce3b8e10eac1234fe0b9c67be7482ba688f46a966ea0250f03266&width=500&quality=90",
     tags: ["Javascript", "HTML", "React", "CSS"],
     category: "web app",
     github: "https://github.com/Ashly-Ochwada/Weather_Check",
@@ -619,7 +619,7 @@ export const projects = [
     title: "Ecommerce Website",
     date: "January 2025 - Ongoing",
     description:
-      "E-commerce webiste for health products",
+      "A modern online store dedicated to offering a wide range of high-quality health and wellness products. The platform provides a seamless shopping experience with features like product categorization, secure payment options, personalized recommendations, and fast delivery services, ensuring customers can access health essentials effortlessly.",
     image:
       "https://mir-s3-cdn-cf.behance.net/project_modules/hd/ce5d0c87104663.5dae0fd1e4dfe.jpg",
     tags: ["Javascript", "HTML", "React", "CSS"],

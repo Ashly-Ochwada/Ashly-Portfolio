@@ -99,6 +99,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 cursor: "pointer",
                 display: "flex",
                 alignItems: "center",
+                transition: "all 0.3s ease",
               }}
             >
               {darkMode ? (
@@ -116,22 +117,35 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </div>
         </ButtonContainer>
         {isOpen && (
-          <MobileMenu isOpen={isOpen}>
-            {["about", "skills", "experience", "projects", "education"].map((section) => (
-              <MobileLink
-                key={section}
-                href={`#${section}`}
-                onClick={() => setIsOpen(!isOpen)}
-                style={{
-                  color: activeSection === section ? theme.primary : "white", 
-                  fontWeight: activeSection === section ? "bold" : "normal", 
-                }}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </MobileLink>
-            ))}
+          <MobileMenu
+            isOpen={isOpen}
+            style={{
+              backgroundColor: darkMode ? "black" : "white",
+              color: darkMode ? "white" : "black",
+            }}
+          >
+            {["about", "skills", "experience", "projects", "education"].map(
+              (section) => (
+                <MobileLink
+                  key={section}
+                  href={`#${section}`}
+                  onClick={() => setIsOpen(!isOpen)}
+                  style={{
+                    color: activeSection === section
+                      ? theme.primary
+                      : darkMode
+                      ? "white"
+                      : "black",
+                    fontWeight: activeSection === section ? "bold" : "normal",
+                  }}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </MobileLink>
+              )
+            )}
           </MobileMenu>
         )}
+
       </NavbarContainer>
     </Nav>
   );
